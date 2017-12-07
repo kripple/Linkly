@@ -22,26 +22,10 @@
   </div>
 
   <div id="display">
+    <div v-if="linkVisible"></div>
     {{ convertedLink }}
   </div>
 
-  <script>
-    var display = new Vue({
-      el: '#display',
-      data: {
-        convertedLink: ''
-      }
-    })
-
-    var input = new Vue({
-      el: '#input',
-      data: {
-        link: '',
-        convertLink: function() {
-          display.convertedLink = input.link.toLowerCase();
-        }
-      }
-    })
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
