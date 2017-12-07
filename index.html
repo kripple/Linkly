@@ -15,8 +15,33 @@
 
 <body>
   <h1>Linkly</h1>
+  <script src="https://unpkg.com/vue"></script>
+
+  <div id="input">
+    <input type="url" v-model="link" v-on:keyup="convertLink()">
+  </div>
+
+  <div id="display">
+    {{ convertedLink }}
+  </div>
+
   <script>
-    alert("Hello!");
+    var display = new Vue({
+      el: '#display',
+      data: {
+        convertedLink: ''
+      }
+    })
+
+    var input = new Vue({
+      el: '#input',
+      data: {
+        link: '',
+        convertLink: function() {
+          display.convertedLink = input.link.toLowerCase();
+        }
+      }
+    })
   </script>
 </body>
 </html>
