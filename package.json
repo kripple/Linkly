@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Link converter",
   "scripts": {
-    "test": "karma start"
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
