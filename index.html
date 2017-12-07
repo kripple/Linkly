@@ -15,17 +15,18 @@
 
 <body>
   <link rel="stylesheet" type="text/css" href="styles.css">
-  
-  <h1>Linkly</h1>
   <script src="https://unpkg.com/vue"></script>
 
-  <div id="input">
-    <input type="url" v-model="link" v-on:keyup="convertLink()">
-  </div>
+  <div class="container">
+    <div id="input" class="input">
+      <input type="url" placeholder="enter link to convert" v-model="link" v-on:keyup="convertLink()">
+    </div>
 
-  <div id="display">
-    <div v-if="linkVisible"></div>
-    {{ convertedLink }}
+    <div id="display" class="display">
+      <div v-if="linkVisible">
+        <a v-bind:href="convertedLink" target="_blank">Google Maps Link</a>
+      </div>
+    </div>
   </div>
 
   <script src="main.js"></script>
