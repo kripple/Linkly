@@ -20,7 +20,7 @@ var input = new Vue({
     
       latitude = latitude[0].substring(4);
       longitude = longitude[0].substring(4);
-      display.convertedLink = 'https://www.google.com/maps/place/' + latitude + ',' + longitude;
+      display.convertedLink = latitude + ',' + longitude;
 
       display.linkVisible = true;
     }
