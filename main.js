@@ -2,7 +2,8 @@ var display = new Vue({
   el: '#display',
   data: {
     convertedLink: '',
-    linkVisible: false
+    linkVisible: false,
+    coordinates: ''
   }
 })
 
@@ -21,6 +22,8 @@ var input = new Vue({
       latitude = latitude[0].substring(4);
       longitude = longitude[0].substring(4);
       display.convertedLink = latitude + ',' + longitude;
+      
+      display.coordinates = latitude + ',' + longitude;
 
       display.linkVisible = true;
     }
